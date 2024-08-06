@@ -1,24 +1,10 @@
-# README
+- Ruby version: 3.3.3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Database creation
+  rails db:create db:migrate db:seed
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- TODOS
+  - CRUD operations for models
+  - Get Activity Feed by User
+  - Concern: Pagination
+  - Service: Github (get events by username)
