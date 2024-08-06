@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib/tasks', 'seeds', 'users.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
 csv.each do |row|
-  u = User.new  
+  u = User.new
   u.id = row['id']
   u.email = row['email']
   u.name = row['name']
@@ -16,9 +18,9 @@ csv.each do |row|
 end
 
 csv_text = File.read(Rails.root.join('lib/tasks', 'seeds', 'ratings.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
 csv.each do |row|
-  r = Rating.new  
+  r = Rating.new
   r.id = row['id']
   r.user_id = row['user_id']
   r.rater_id = row['rater_id']
@@ -31,9 +33,9 @@ csv.each do |row|
 end
 
 csv_text = File.read(Rails.root.join('lib/tasks', 'seeds', 'posts.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|  
-  p = Post.new  
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+csv.each do |row|
+  p = Post.new
   p.id = row['id']
   p.title = row['title']
   p.body = row['body']
@@ -46,9 +48,9 @@ csv.each do |row|
 end
 
 csv_text = File.read(Rails.root.join('lib/tasks', 'seeds', 'comments.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
 csv.each do |row|
-  c = Comment.new  
+  c = Comment.new
   c.id = row['id']
   c.user_id = row['user_id']
   c.post_id = row['post_id']
