@@ -1,5 +1,5 @@
-# frozen_string_literal: true
-
 class Post < ApplicationRecord
+  include CommonScopes
+  
   belongs_to :user
 end
